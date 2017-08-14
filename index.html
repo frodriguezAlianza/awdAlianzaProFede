@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="/styles/common.css">
+    <link rel="stylesheet" type="text/css" href="/styles/header.css">
+    
+    
+</head>
+<body>
+  <style>
+  .back{
+  /* The image used */
+    background-image: url("C:/Users/usuario/Desktop/alianza/practico/estatico/images/main-header.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*Altura full screen*/
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+}
+.up{
+  height:500px;background-color:red;font-size:36px
+}
+.perfil{
+
+   /*SEfecto scale*/
+    min-height:270px; 
+    min-width: 130px;
+    position: absolute;
+    top:20%;
+    left:50%;
+    background-image: url("C:/Users/usuario/Desktop/alianza/practico/estatico/images/sso_aem.png");
+    opacity: 0.5;
+    color:black;
+    transition: all .2s ease-in-out;
+}
+.perfil_on{
+  transform: scale(2);
+  transition: all .2s ease-in-out;
+}
+
+
+
+</style>
+<div class="back">
+
+</div>
+
+<div class="up">
+Esta es la seccion que pasa por encima del div de fondo.
+Tambien se puede ajustar su altura al contenido si cambiamos a min-height: auto.
+Esta superposicion es muy usando en homepages de CRMs.
+</div>
+<script>
+
+</script>
+</body>
+</html>
