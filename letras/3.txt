@@ -1,0 +1,3 @@
+Parallax, ZoomIn-Out
+3) Crear una estructura HTML5 que refleje la utilizacion de las reglas CSS background, transition, tranform y se aplicara el efecto Hover sobre un elemento.
+3.1) Crear dos contenedores hermanos que reflejen el efecto Parallax de CSS. Uno de ellos contendra una imagen de fondo sobre todo el viewport. El contenedor hermanotendra un texto centrado que al hacerle hover sobre el mimso se agrande y rote, al salir del hover el texto volvera a su posicion orogial tardando 2s.

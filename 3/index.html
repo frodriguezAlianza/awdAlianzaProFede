@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoom In/Out</title>
+    
+    
+</head>
+<body>
+  <style>
+ @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+  height: 100%;
+  overflow-y: scroll;/*importante*/
+  overflow-x: hidden;/*importante*/
+}
+
+h1 {
+   font-size: 250%;
+   transition: 2s;
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;/*vh  Relative to 1% of the height of the viewport. Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.*/
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+  background-size: cover; /*imporatnte*/ 
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("http://lorempixel.com/640/480/abstract/6/");
+  background-attachment: fixed;/*imporatnte*/  
+}
+
+#slide4 {
+  background: #222;
+}
+
+.agrandar{
+  transform: scale(1.5) rotateZ(-30deg);
+  transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+
+</style>
+
+<div id="title" class="slide header">
+  <h1>CSS Parallax</h1>
+</div>
+
+<div id="slide4" class="slide header">
+    <h1>The End</h1>
+</div>
+
+
+<script src="C:/Users/usuario/Desktop/alianza/practico/ejemplos/3/js/core/jquery/jquery-3.2.1.min.js"></script>
+<script src="C:/Users/usuario/Desktop/alianza/practico/ejemplos/3/js/custom.js"></script>
+</body>
+</html>

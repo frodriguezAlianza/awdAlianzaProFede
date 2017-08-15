@@ -1,0 +1,6 @@
+
+1) Creaer una pagina HTML 5 que represente la utilizacion de la regla CSS denominada background. 
+
+1.1) Representar en el cuerpo de la pagina una imagen que ocuape toda la pantalla, este centrada.
+1.2) Incluir una nueva imagen que se repita verticalamente sobre la image del punto 1.1, en el medio de la panatalla.
+1.3) En otra seccion, utilizar backgrounds multiples con las dos imagenes usadas  en un solo div  width: 100%;height: 400px;
