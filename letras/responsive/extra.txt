@@ -1,5 +1,11 @@
+1) CREAR una estructura HTML 5 base con header,aritcle y sections. Aplicando tecnicas de Diseño Flexible, Disño Responsivo y medidas relativas.
+1.1)Crear en el <header> una imagen que compelete el viewport.
+1.2)Crear una seccion con una imagen del lado izquierdo y un parrafo del lado derecho.
+1.3)Crear una seccion con un video.(extra)
+1.4)Crear en el footer una seccion que contenga datos de ubicacion y de contacto del lado izquierdo, y un mapa del lado derecho.(extra)
 
-A partir del siguiente sitio web, y utilizando una estrategia "Mobile First", adaptarlo para que se visualice de manera correcta en un dispositivo smartphone y en una tablet. Se pide:
+
+2) A partir del siguiente sitio web, y utilizando una estrategia "Mobile First", adaptarlo para que se visualice de manera correcta en un dispositivo smartphone y en una tablet. Se pide:
 
 Identificar la disposición de los elementos para cada una de las resoluciones.
 El diseño actual es una estructura de anchos fijos. El nuevo diseño se debe basar en una estructura de rejilla flexible.
