@@ -4,217 +4,205 @@
     <meta charset="UTF-8">
     <title>Transition</title>
 </head>
-<body>
-  <style>
-   /*
-https://mdn.mozillademos.org/files/11983/starsolid.gif
-  cambiar repeat para ver resultados  y el fixed
-   background-attachment: fixed;
-   Si una imagen de fondo background-image es especificada, background-attachment determina si la imagen será fija dentro de la pantalla o se desplazará junto al bloque contenedor.*/
-
-.warning { 
-  background: red; 
-}
-
-.topbanner { 
-
-  
+<style>
+    /*
+ https://mdn.mozillademos.org/files/11983/starsolid.gif
+   cambiar repeat para ver resultados  y el fixed
+    background-attachment: fixed;
+    Si una imagen de fondo background-image es especificada, background-attachment determina si la imagen será fija dentro de la pantalla o se desplazará junto al bloque contenedor.*/
  
-}
-.container{
-  width: 100%;
-  height: 400px;
-  display:table;
-}
-.fondo{
-  background: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg) #00D center center;
-  background-size: cover;
-}
-.caja1{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  transition: all 0.5s ease-in-out;
-}
-.caja1:hover{
-  opacity: 0.5;
-  transition: all 0.5s ease-in-out;
-}
-.caja2{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
-.caja2 .procces_bar{
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-  color: white;
-  background-color: #ED8029;
-  text-align: right;
-  border-radius: 5px;
-}
-.caja2:hover .procces_bar{
-  width: 300px;
-  -webkit-transition: 3s ease;
-  -moz-transition: 3s ease;
-  -o-transition: 3s ease;
-  -ms-transition: 3s ease;
-  transition: 3s ease;
-}
-
-.caja3{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
-}
-.caja3 .procces_bar{
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-  color: white;
-  background-color: #ED8029;
-  text-align: right;
-  border-radius: 5px;
-}
-.caja3:hover .procces_bar{
-  width: 200px;
-  -webkit-transition: 3s linear;
-  -moz-transition: 3s linear;
-  -o-transition: 3s linear;
-  -ms-transition: 3s linear;
-  transition: 3s linear;
-}
-.caja4{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: green;
-}
-.caja4 .procces_bar{
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-  color: white;
-  background-color: #ED8029;
-  text-align: right;
-  border-radius: 5px;
-}
-.caja4:hover .procces_bar{
-  width: 200px;
-  -webkit-transition: 3s ease-in;
-  -moz-transition: 3s ease-in;
-  -o-transition: 3s ease-in;
-  -ms-transition: 3s ease-in;
-  transition: 3s ease-in;
-}
-.caja5{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: black;
-}
-.caja5 .procces_bar{
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-  color: white;
-  background-color: #ED8029;
-  text-align: right;
-  border-radius: 5px;
-}
-.caja5:hover .procces_bar{
-  width: 200px;
-  -webkit-transition: 3s ease-out;
-  -moz-transition: 3s ease-out;
-  -o-transition: 3s ease-out;
-  -ms-transition: 3s ease-out;
-  transition: 3s ease-out;
-}
-.caja6{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: black;
-}
-.caja6 .procces_bar{
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-  color: white;
-  background-color: #ED8029;
-  text-align: right;
-  border-radius: 5px;
-}
-.caja6:hover .procces_bar{
-  width: 200px;
-  -webkit-transition: 3s ease-in-out;
-  -moz-transition: 3s ease-in-out;
-  -o-transition: 3s ease-in-out;
-  -ms-transition: 3s ease-in-out;
-  transition: 3s ease-in-out;
-}
-
-.caja7{
-  display:table-cell;
-  width: 100px;
-  height: 100px;
-  background-color: black;
-}
-.caja7 .procces_bar{
-  width: 100px;
-  margin: 5px 0;
-  padding: 5px;
-  color: white;
-  background-color: #ED8029;
-  text-align: right;
-  border-radius: 5px;
-}
-.caja7:hover .procces_bar{
-  width: 200px;
-  -webkit-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  -moz-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  -o-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  -ms-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-
-</style>
-<div class="container">
-  <div class="fondo caja1">
-  </div>
-  <div class="fondo caja2">
-    <div class="procces_bar">
+ .container{
+   width: 100%;
+   height: 400px;
+   display:table;
+ }
+ .fondo{
+   background: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg) #00D center center;
+   background-size: cover;
+ }
+ .caja1{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: blue;
+   transition: all 0.5s ease-in-out;
+ }
+ .caja1:hover{
+   opacity: 0.5;
+   transition: all 0.5s ease-in-out;
+ }
+ .caja2{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: red;
+ }
+ .caja2 .procces_bar{
+   width: 100px;
+   margin: 5px 0;
+   padding: 5px;
+   color: white;
+   background-color: #ED8029;
+   border-radius: 5px;
+ }
+ .caja2:hover .procces_bar{
+   width: 300px;
+   -webkit-transition: 3s ease;
+   -moz-transition: 3s ease;
+   -o-transition: 3s ease;
+   -ms-transition: 3s ease;
+   transition: 3s ease;
+ }
+ 
+ .caja3{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: yellow;
+ }
+ .caja3 .procces_bar{
+   width: 100px;
+   margin: 5px 0;
+   padding: 5px;
+   color: white;
+   background-color: #ED8029;
+   text-align: right;
+   border-radius: 5px;
+ }
+ .caja3:hover .procces_bar{
+   width: 200px;
+   -webkit-transition: 3s linear;
+   -moz-transition: 3s linear;
+   -o-transition: 3s linear;
+   -ms-transition: 3s linear;
+   transition: 3s linear;
+ }
+ .caja4{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: green;
+ }
+ .caja4 .procces_bar{
+   width: 100px;
+   margin: 5px 0;
+   padding: 5px;
+   color: white;
+   background-color: #ED8029;
+   text-align: right;
+   border-radius: 5px;
+ }
+ .caja4:hover .procces_bar{
+   width: 200px;
+   -webkit-transition: 3s ease-in;
+   -moz-transition: 3s ease-in;
+   -o-transition: 3s ease-in;
+   -ms-transition: 3s ease-in;
+   transition: 3s ease-in;
+ }
+ .caja5{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: black;
+ }
+ .caja5 .procces_bar{
+   width: 100px;
+   margin: 5px 0;
+   padding: 5px;
+   color: white;
+   background-color: #ED8029;
+   text-align: right;
+   border-radius: 5px;
+ }
+ .caja5:hover .procces_bar{
+   width: 200px;
+   -webkit-transition: 3s ease-out;
+   -moz-transition: 3s ease-out;
+   -o-transition: 3s ease-out;
+   -ms-transition: 3s ease-out;
+   transition: 3s ease-out;
+ }
+ .caja6{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: black;
+ }
+ .caja6 .procces_bar{
+   width: 100px;
+   margin: 5px 0;
+   padding: 5px;
+   color: white;
+   background-color: #ED8029;
+   text-align: right;
+   border-radius: 5px;
+ }
+ .caja6:hover .procces_bar{
+   width: 200px;
+   -webkit-transition: 3s ease-in-out;
+   -moz-transition: 3s ease-in-out;
+   -o-transition: 3s ease-in-out;
+   -ms-transition: 3s ease-in-out;
+   transition: 3s ease-in-out;
+ }
+ 
+ .caja7{
+   display:table-cell;
+   width: 100px;
+   height: 100px;
+   background-color: black;
+ }
+ .caja7 .procces_bar{
+   width: 100px;
+   margin: 5px 0;
+   padding: 5px;
+   color: white;
+   background-color: #ED8029;
+   text-align: right;
+   border-radius: 5px;
+ }
+ .caja7:hover .procces_bar{
+   width: 200px;
+   -webkit-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+   -moz-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+   -o-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+   -ms-transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+   transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+ }
+ 
+ 
+ </style>
+<body>
+  
+  <div class="container">
+    <div class="fondo caja1">
+    </div>
+    <div class="fondo caja2">
+      <div class="procces_bar">
+      </div>
+    </div>
+    <div class="fondo caja3">
+      <div class="procces_bar">
+      </div>
+    </div>
+    <div class="fondo caja4">
+      <div class="procces_bar">
+      </div>
+    </div>
+    <div class="fondo caja5">
+      <div class="procces_bar">
+      </div>
+    </div>
+    <div class="fondo caja6">
+      <div class="procces_bar">
+      </div>
+    </div>
+    <div class="fondo caja7">
+      <div class="procces_bar">
+      </div>
     </div>
   </div>
-  <div class="fondo caja3">
-    <div class="procces_bar">
-    </div>
-  </div>
-  <div class="fondo caja4">
-    <div class="procces_bar">
-    </div>
-  </div>
-  <div class="fondo caja5">
-    <div class="procces_bar">
-    </div>
-  </div>
-  <div class="fondo caja6">
-    <div class="procces_bar">
-    </div>
-  </div>
-  <div class="fondo caja7">
-    <div class="procces_bar">
-    </div>
-  </div>
-</div>
-
-<script>
-
-</script>
+  
 </body>
 </html>

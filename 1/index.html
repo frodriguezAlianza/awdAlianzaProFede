@@ -4,61 +4,52 @@
     <meta charset="UTF-8">
     <title>Background</title>
 </head>
-<body>
-  <style>
-   /*
-https://mdn.mozillademos.org/files/11983/starsolid.gif
-  cambiar repeat para ver resultados  y el fixed
-   background-attachment: fixed;
-   Si una imagen de fondo background-image es especificada, background-attachment determina si la imagen será fija dentro de la pantalla o se desplazará junto al bloque contenedor.*/
-
-.warning { 
-  background: red; 
-}
-
-.topbanner { 
-  width: 100%;
-  height: 400px;
-  background: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg) #00D center center;
-  background-size: cover;
- 
-}
-.topbannerRepeat { 
-    background: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/star.svg);
-    background-repeat: repeat-y;
-    background-position: right;
-    height: 100%;
-    width: 50%;
-
-}
-
-.topbannerMultiple { 
+<style>
+  
+    .topbanner { 
+      width: 100%;
+      height: 400px;
+      background: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg) #00D center center;
+      background-size: cover;
     
-    width: 100%;
-    height: 400px;
-    background-image: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/bubbles.png),url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: cover;
+    }
+    .topbannerRepeat { 
+        background: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/star.svg);
+        background-repeat: repeat-y;
+        background-position: right;
+        height: 100%;
+        width: 50%;
+  
+    }
+    .topbannerMultiple { 
+        
+        width: 100%;
+        height: 400px;
+        background-image: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/bubbles.png),url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: cover;
+  
+    }
+    .topbannerContain{
+        width: 100%;
+        height: 400px;
+        background-image: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/bubbles.png),url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: contain, cover;
+    }
+    </style>
+    
+<body>
 
-}
-.topbannerContain{
-    width: 100%;
-    height: 400px;
-    background-image: url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/bubbles.png),url(C:/Users/usuario/Desktop/awdAlianzaProFede/img/main-header.jpg);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: contain, cover;
-}
-</style>
-<div class="topbanner ">
-  <div class="topbannerRepeat"></div>
-</div>
-<div class="topbannerMultiple">
-</div>
-<div class="topbannerContain">
-</div>
+  <div class="topbanner ">
+    <div class="topbannerRepeat"></div>
+  </div>
 
-<script>
+  <div class="topbannerMultiple">
+  </div>
 
-</script>
+  <div class="topbannerContain">
+  </div>
+  
 </body>
 </html>

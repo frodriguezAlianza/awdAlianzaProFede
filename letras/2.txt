@@ -1,5 +1,5 @@
 Transition
-2) Estudiar la regla transition para hace estos ejercicios. Crear una estructura HTML 5 con secctiones dentro de un contenedor.
+2) Estudiar la regla transition para hace estos ejercicios. Crear una estructura HTML 5 con secciones dentro de un contenedor.
 2.1)Crear ua seccion cuyo efecto on hover implique usar la regla transition para cambiar su opacidad, tanto al entrar en el hover como al salir con duracion 0.5s.
 2.2) Crear otra seccion que demuestre la regla transition ease in-out, donde el elemento aumente el doble de su width en el hover y dure 3s.
 2.3) Otra seccion que demuestre la regla transition cubic-bezier(0.68, -0.55, 0.27, 1.55)  donde el elemento aumente el doble de su width en el hover y dure 3s.
