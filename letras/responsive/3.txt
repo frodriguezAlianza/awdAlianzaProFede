@@ -1,3 +1,0 @@
-Bootstrap
-
-1) Realizar un template responsive utilizando el framework Bootstrap.

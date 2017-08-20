@@ -2,7 +2,7 @@
 RESPONSIVE
 
 1) Realiazar un estructura HTML5 en cuyo <body> contenga una seccion con un parrafo lleno de caracteres (240 words aprox.)
-1.1) Utilizar la tencia de inclucion de de archivos para dos dispositivos diferentes mas escritorio, usando la siguientes especificaciones de diseno: mobile(hasta 320px)
+1.1) Utilizar la tecnica de inclucion de de archivos para dos dispositivos diferentes mas escritorio, usando la siguientes especificaciones de diseno: mobile(hasta 320px)
 								-color: white;
 								-background-color: black;
 							tablet(de 321px a 720px)

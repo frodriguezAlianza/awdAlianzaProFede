@@ -1,6 +1,6 @@
 1)Logra el mismo comportamiento que el ejercicio anterior pero utilizando media queries en un archivos colo de css.
 2) Utilizar la metada viewport correctamente.
-3) Mover el parrafo del ejercicio anterior adentro de un div contenedor. Crear 7 hermanos de este nuevo contenedor con el mismo contenido y asigna una clase a cada uno con combre contenedor1,contenedor2,..contenedor7. A cad auno de ellos agregarle la regla de css background-color con diferentes colores para cada uno. Completar los sguientes requerimientos:
+3) Mover el parrafo del ejercicio anterior adentro de un div contenedor. Crear 7 hermanos de este nuevo contenedor con el mismo contenido y asigna una clase a cada uno con combre contenedor1,contenedor2,..contenedor7. A cada uno de ellos agregarle la regla de css background-color con diferentes colores para cada uno. Completar los sguientes requerimientos:
 	3.1- El contenedor1 y 7 ocuparan el total del viewport para cualquier medidad del mismo.Con altura fija 30px.
 	3.2- El contenedor 2,3 y 4 estaran alineados uno al lado del otro (dentro de un contenedorayuda) siempre y ocuparan     1/3 del viewport.cada uno tendra altura 100px.
 	3.3- El contendero 5 y 6 estaran alineados uno al lado del otro (dentro de un contenedorayuda) siempre y ocuparan la mitad del viewport cada uno. COn latura cada uno de 50px. Por ultimo los parraafos contenidos dentro de cada contenedor deberan teneder padding flexible solo a la derecha y izquierda del texto.
