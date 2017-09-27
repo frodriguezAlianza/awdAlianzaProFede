@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+    <h1>Controlador</h1>
+    <div ng-controller="padreControlador"><!--9-->
+        <label>{{textoPadre}}.</label>
+        Ingresar valor: <input style="width:300px" type="text" ng-model="textoDelPadreCopia" placeholder="Es del padre pero cambio su valor en el hijo">
+        <label>En el Padre copia del Hijo: {{textoDelHijoCopia}}</label>
+        <hr>
+        <div ng-controller="hijoControlador"><!--9-->
+            <label >{{textoHijo}}</label>
+
+            <!--Accedemos al valor de una variable del padre y la visualizamos -->
+            <label >En el hijo: {{$parent.textoPadre}}</label>
+
+            <label>En el hijo copia del Padre: {{textoDelPadreCopia}}.</label>
+            Ingresar valor: <input type="text" style="width:300px" ng-model="textoDelHijoCopia" placeholder="Es del hijo pero se ve en el padre">
+                
+            <hr>
+        </div>
+    </div>
+    <hr><hr>
+    <section ng-controller="manualCtrl as manual">
+        <p>
+            Manual: {{ manual.nombre }}
+        </p>
+        <article ng-controller="articuloCtrl as articulo">
+            Artículo: {{ articulo.nombre }}
+            <p>
+            Este artículo pertenece al manual {{ manual.nombre }}
+            </p>
+            <p ng-controller="comentariosCtrl as comentario">
+                Este comentario lo escribe {{ nombre }}
+                <br>
+                Pertenece al artículo {{ articulo.nombre }}
+                <br>
+                Que a su vez pertenece al manual {{ manual.nombre }}
+            </p>
+        </article>
+    </section>
+    <script>
+        var app = angular.module('myApp', []);
+        
+        app.controller("padreControlador",["$scope",function($scope){
+            //Inicializar las variables desde el controlador
+            $scope.textoPadre = "Texto del Padre...";
+            $scope.textoHijo = "Texto del Hijo Desde el Padre";
+        }]);
+        app.controller("hijoControlador",["$scope",function($scope){
+            //Inicializar las variables desde el controlador
+            $scope.textoHijo = "Texto del Hijo...";
+        }]);
+
+        app.controller("manualCtrl",["$scope",function($scope){
+            //Inicializar las variables desde el controlador
+            $scope.nombre = "El nombre de mi manual";
+        }]);
+        app.controller("articuloCtrl",["$scope",function($scope){
+            //Inicializar las variables desde el controlador
+            $scope.nombre = "El nombre de los articulos";
+        }]);
+        app.controller("comentariosCtrl",["$scope",function($scope){
+            //Inicializar las variables desde el controlador
+            $scope.nombre = "El nombre de los comentarios";
+        }]);
+        
+    </script>
+    </div>
+</body>
+</html>

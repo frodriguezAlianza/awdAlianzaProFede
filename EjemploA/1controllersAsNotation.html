@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+    <h1>Controlador</h1>
+    <div ng-controller="MainCtrl as main">
+        {{ main.title }}
+        {{ newVal }}
+      <!--  {{ title }} -->
+        <div ng-controller="OtroCtrl as otro">
+          Scope title: {{ otro.title }}
+          Parent title: {{ main.title }}
+          <div ng-controller="OtroMasCtrl as otromas">
+            Scope title: {{ otromas.title }}
+            Parent title: {{ otro.title }}
+            Parent parent title: {{ main.title }}
+          </div>
+        </div>
+    </div>
+    <script>
+       angular.module('myApp', [])
+       .controller('MainCtrl', function ($scope) {
+            this.title = 'Some title';
+            $scope.newVal="New VAl";
+        })
+       .controller('OtroCtrl', function () {
+            this.title = 'Some title Otro';
+        })
+        .controller('OtroMasCtrl', function ($scope) {
+            this.title = 'Some title Otro Mas';
+            $scope.newVar="New Val";
+        });
+        //SIN EL AS
+       /* app.controller("MainCtrl",["$scope",function($scope){
+            //Inicializar las variables desde el controlador
+            $scope.title = "El nombre de los articulos";
+        }]);
+        */
+        //this & scope MALA PREACTICA
+       /* app.controller('MainCtrl', function ($scope) {
+            this.title = 'Some title';
+            $scope.title = "El nombre de los articulos";
+        });
+        */
+        
+    </script>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<script>
+        
+             //   var app = angular.module('myApp', []);
+        /*
+                app.filter('myFormat', function() {
+                    return function(x) {
+                        var i, c, txt = "";
+                        for (i = 0; i < x.length; i++) {
+                            c = x[i];
+                            if (i % 2 == 0) {
+                                c = c.toUpperCase();
+                            }
+                            txt += c;
+                        }
+                        return txt;
+                    };
+                });
+                app.controller('namesCtrl', function($scope) {
+                    $scope.names = ['Jani', 'Carl', 'Margareth', 'Hege', 'Joe', 'Gustav', 'Birgit', 'Mary', 'Kai'];
+                });
+                //MOstrar aka Setters
+                //angular.module('app', []); //Para setear un modulo
+                //angular.module('app'); //obtiene un modulo
+        */
+            </script>

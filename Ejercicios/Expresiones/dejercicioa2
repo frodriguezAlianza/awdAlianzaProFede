@@ -1,0 +1,6 @@
+//MODULOS
+2) Utilizando Modulos con un controlador, sin ng-init.
+2.1) Crear una estructura basica de angular con modulos y mostrando una variable del scope ,(llamada hola), del controlador con el valor "Hola Mundo".
+2.2) Hacer que el valor de la variable (hola) tome el valor de un input.
+2.3) Crear un filtro personalizado en el que la primer y ultima  letra de la marca de los autos sean mayuscula y a la vez se podra filtrar el arreglo de autos por el valor de la marca ingresada en un input.
+2.4) Ordenar esta lista por color.

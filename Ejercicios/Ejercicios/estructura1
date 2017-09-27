@@ -1,0 +1,7 @@
+1) Crearemos una aplicacion con AngularJS siguiendo el patron de diseño Especifico. dentro de un directorio con nombre exampleApp.
+1.1) Crear un archivo index.html con el template basico de angular.
+1.2) Crear un archivo app.js donde crearemos el modulo de la aplicacion.
+1.3) Dentro de un directorio llamado controllers crear un archivo llado tareasController. donde se encuentra el controlador que maneja la logica del scope de las tareas.
+1.4) Crear un directorio llamado filters donde se encuentra el archivo tareasFilters.js, en el definiremos los filtros usados para las tareas.
+1.5) Crear un directorio llamado services, en el crear un archivo tareasServices.js donde se agregara la logica que obtine los datos de las tareas. Para este ejemplo los metodos de los servicios solo devuelven un array de objetos JSON al ser invocador por el controlador sin necesidad de hacer peticciones al servidor.
+1.6) Crear un archivo llamado filtros.js en la misma altura que los directorios anteriores, donde se agregaran los filtros de nuestra app. Como por ejemplo el filtro de Mayusculas y minusculas. Una vez agregado aplicarlo en sobre los nomsbres de las tareas.

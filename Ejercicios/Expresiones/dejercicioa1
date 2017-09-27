@@ -1,0 +1,50 @@
+Para realizar los ejercicios de Angualr vamos a crear un directorio en nuestro repo con el nombre angularEj, en su interior habra: - un directorio llamado "core" que contendra el archivos min.js con el core de angularjs.
+				- los archivos HTML de los ejercicios. Ejemplo ejercicio1.html donde se resolveran los ej1.1,1.2,1.3,1.4
+
+Expresiones:
+
+
+Dado:
+persona{
+	nombre: "Tomas",
+	apellido: "Lorenzo"
+}
+autos[
+	{
+		marca: "Fiat",
+		color: "Verde"
+	},
+	{
+		marca: "Porche",
+		color: "Violeta"
+	},
+	{
+		marca: "bmw",
+		color: "Amarillo"
+	},
+	{
+		marca: "Ferrari",
+		color: "Rojo"
+	},
+	{
+		marca: "Porche",
+		color: "Negro"
+	},
+	{
+		marca: "Porche",
+		color: "Azul"
+	}
+]
+1) Utilizando  expresiones, aka-IF, ng-switch, y filtros.
+1.1) Visualizar el nombre y apellido del objeto persona horizontalmente.(expresiones)
+
+1.2) Completar la frase visualizando la propiedad del objeto del arreglo autos: ..."cruzando el semaforo con mi auto Ferrari de color__________".(expresiones)
+
+1.3)Mostrar el color del auto Fiat solo si el nombre de la person es Tomas sino mostrar el color del auto bmw.(aka-IF)
+
+1.4) Hacer que la marca de los autos se vean en mayuscula.(ng-switch y filtros)
+
+1.5) Crear una seccion que contenga un input del tipo checkbox. Debajo un div cuyo fondo varia entre dos imagenes al seleccionar y des-seleccionar el checkbox. (ng-show/ng-hide)
+
+1.6) Mostrar una lista(ul,li) con los colores de los autos con marca Porche.(ng-repeat, ng-if)
+

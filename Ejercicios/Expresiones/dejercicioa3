@@ -1,0 +1,8 @@
+//CONTROLADORES
+
+En memoria.
+1) Crear un componente TODO List.
+1.1) Debe tener un input donde el usuario pueda escribir el nombre de la tarea. Al momento de escribir un valor en input, debajo de el, visualizar el valor ingresado de la siguiente forma "El nueva itema ha agregar es:___(Nombre del item)_____".
+1.2) Se deben crear los metodos que agregan tareas desde un input, eliminan y editan cada item de la lista.
+1.3) La lista tiene que estar ordenada alfabeticamente.
+1.4) Agregar un boton clear All que vuelve la lista a sus estado incial.

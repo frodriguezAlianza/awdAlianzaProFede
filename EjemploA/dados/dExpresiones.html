@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="persona={nombre:'Julio',apellido:'Santos'};autos=[{marca:'Fiat',color: 'Verde'},{marca:'Porche',color: 'Azul'},{marca: 'bmw',color:'Amarillo'},{marca: 'Ferrari',color: 'Rojo'},{marca:'Porche',color: 'Amarillo'}]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+	<h1>Expresiones</h1>
+ 	<div>Persona: {{persona.nombre}} </div>
+
+	<div>Marca: {{autos[0].marca}}</div>
+
+	<div>Persona mas: {{persona.nombre === 'Julio' ? autos[0].marca : autos[1].marca}}</div>
+
+	<div>{{ persona.nombre === 'Julio' && 'Hola' || 'oh no, No se llama Julio'}}</div>
+    <h2>Listas</h2>
+	 <div ng-repeat="auto in autos | orderBy:'color'">
+	 <div ng-if="auto.marca == 'Porche'">Color: {{auto.color}}</div>
+
+        <div>Marca: {{auto.marca}}</div>
+        <div>{{ auto.marca === 'bmw' && 'Es una Bemba' || 'oh no, No es una bemba'}}</div>
+
+        <div ng-switch on="{{ auto.marca === 'bmw'}}">
+            <span ng-switch-when="true">
+
+            </span>
+            <span ng-switch-default>Noo me gusta.</span>
+        </div>
+    </div>
+</body>
+</html>

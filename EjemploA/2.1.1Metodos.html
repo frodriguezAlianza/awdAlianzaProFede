@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App- Metodos</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body ng-controller="PrimerController">
+    <h1>Metodos</h1>
+    <div>
+        <h3>Usuario 1</h3>
+        Nombre: <input type="text" ng-model="user1.name" ng-focus="user1.name = 'Tito'">
+        Edad: <input type="number" ng-model="user1.age">
+    </div>
+    <div>
+        <h3>Usuario 2</h3>
+        Nombre: <input type="text" ng-model="user2.name">
+        Edad: <input type="number" ng-model="user2.age">
+    </div>
+    <div>
+        <br/>
+        <input type="button" value="Compare" ng-click="compare()">
+        <input type="button" value="Copy" ng-click="copy()">
+        <input type="button" value="My For Each" ng-click="myForEach()">
+        <input type="button" value="Validate Type" ng-click="validateType()">
+        <input type="button" value="To JSON" ng-click="giveMeJSON()">
+    </div>
+    <h3>Resultados</h3>
+    Usuario 1: <pre>{{user1 | json}}</pre>
+    Usaurio 2: <pre>{{user2 | json}}</pre>
+    <h4>Equals</h4>
+    Resultado: <pre>{{result?'Son iguales':'No son iguales'}}</pre>
+    <h4>Copy</h4>
+    Resultado: <pre>{{result2}}</pre>
+    Resultado User1: {{user1}}
+    <hr>
+    <h4>For Each</h4>
+    Resultado: <pre>{{result3}}</pre>
+    <hr>
+    <h4>Validate Type</h4>
+    Usuario es un Array: <pre>{{esArray}}</pre>
+    Solo con edades Numericos: <pre>{{soloNumeros}}</pre>
+    Solo con edades String: <pre>{{soloStrings}}</pre>
+    <hr>
+    <h4>Transfor to JSON</h4>
+    Este es mi JSON: <pre>{{result4}}</pre>
+    <hr>
+    <script>
+        var app = angular.module('myApp', []);
+        
+        app.controller('PrimerController', ['$scope', function($scope) {
+          $scope.user1 = {};
+          $scope.user2 = {};
+          $scope.compare = function() {
+            $scope.result = angular.equals($scope.user1, $scope.user2);
+          };
+          $scope.copy = function() {
+            $scope.result2 = angular.copy($scope.user1);
+            //(Lo que se copia, el que toma el valor de la copia)
+            angular.copy($scope.user2,$scope.user1);
+          };
+
+          $scope.myForEach = function(){
+            $scope.users = [{name:'Jack',age:20},{name:'Lila',age:30},{name:'Kelly',age:45}];
+            $scope.result3 = [];
+            angular.forEach($scope.users, function(value, key) {
+                value.age = value.age + 10;
+                if(value.age > 40){
+                    $scope.result3.push(value);
+                }
+            });
+          }
+
+          $scope.validateType = function(){
+            $scope.users2 = [{name:'Jack',age:20},{name:'Lila',age:'30'},{name:'Kelly',age:45}];
+            $scope.soloNumeros = [];
+            $scope.soloStrings = [];
+
+            $scope.esArray = angular.isArray($scope.users2);
+
+            angular.forEach($scope.users2, function(value, key) {
+
+                if(angular.isNumber(value.age)){
+                    $scope.soloNumeros.push(value);
+
+                }else if(angular.isString(value.age)){
+                    $scope.soloStrings.push(value);
+                }
+            });
+          }
+
+          $scope.giveMeJSON = function(){
+            $scope.result4 = angular.toJson($scope.user1);
+          }
+
+        }]);
+
+    </script>
+    </div>
+</body>
+</html>

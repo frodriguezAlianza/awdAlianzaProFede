@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disparos Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+    <h1>Services Angular Http</h1>
+    <div  ng-controller = "httpController">
+        {{myWelcome}}
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('httpController', ['$scope','$http',function($scope, $http) {
+          $http({method: 'GET', url: 'bienvendio.html'}).
+            then(function(response) {
+              $scope.status = response.status;
+              $scope.myWelcome = response.data;
+            }, function(response) {
+              $scope.data = response.data || 'Request failed';
+              $scope.status = response.status;
+            });
+        }]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body ng-controller="PrimerController">
+	<h1>Filtros Personalizados</h1>
+ 	<ul>
+        <p><input type="text" ng-model="name"></p>
+        <li ng-repeat="x in names | filter:name">
+            {{x | myForma}}
+        </li>
+    </ul>
+    <hr>
+    <h1>Controllers</h1>
+    <div>
+        <h3>Usuario 1</h3>
+        Nombre: <input type="text" ng-model="user1.name">
+        Edad: <input type="number" ng-model="user1.age">
+    </div>
+    <div>
+        <h3>Usuario 2</h3>
+        Nombre: <input type="text" ng-model="user2.name">
+        Edad: <input type="number" ng-model="user2.age">
+    </div>
+    <div>
+        <br/>
+        <input type="button" value="Compare" ng-click="compare()">
+    </div>
+    <h3>Resultado</h3>
+    Usuario 1: <pre>{{user1 | json}}</pre>
+    Usaurio 2: <pre>{{user2 | json}}</pre>
+    Resultado: <pre>{{result?'Son iguales':'No son iguales'}}</pre>
+
+    <script>
+
+        var app = angular.module('myApp', []);
+
+        app.filter('myFormat', function() {
+            return function(x) {
+                var i, c, txt = "";
+                for (i = 0; i < x.length; i++) {
+                    c = x[i];
+                    if (i % 2 == 0) {
+                        c = c.toUpperCase();
+                    }
+                    txt += c;
+                }
+                return txt;
+            };
+        });
+        app.controller('PrimerController', ['$scope', function($scope) {
+          $scope.names = ['Jani', 'Carl', 'Margareth', 'Hege', 'Joe', 'Gustav', 'Birgit', 'Mary', 'Kai'];
+          $scope.user1 = {};
+          $scope.user2 = {};
+          $scope.compare = function() {
+            $scope.result = angular.equals($scope.user1, $scope.user2);
+          };
+        }]);
+        
+        //MOstrar aka Setters
+        //angular.module('app', []); //Para setear un modulo
+        //angular.module('app'); //obtiene un modulo
+    </script>
+    </div>
+</body>
+</html>

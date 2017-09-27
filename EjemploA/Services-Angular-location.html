@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disparos Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+    <h1>Services Angular Location</h1>
+    <div  ng-controller = "locationController">
+         <button ng-click = "getAbsLocation()">Darme ABS URL></button>
+         <button ng-click = "getLocation()">Darme URL></button>
+         <button ng-click = "getParamLocation()">Darme Parametros de la URL></button>
+         <p>Result: {{resultGet}}</p>
+         <button ng-click = "setLocation()">Cambiar URL></button>
+
+         <button ng-click = "setHashLocation()">Cambiar URL con Hash</button>
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller('locationController', ['$scope','$location',function($scope, $location) {
+
+            $scope.getAbsLocation = function(){
+                $scope.resultGet = $location.absUrl();
+            }
+            $scope.getLocation = function(){
+                $scope.resultGet = $location.url();
+            }
+            $scope.getParamLocation = function(){
+                $scope.resultGet = $location.hash();
+            }
+            $scope.setLocation = function(){
+                $location.url('/new/url');
+            }
+            $scope.setHashLocation = function(){
+                $location.hash('parameter1=1;parameter2=6');
+            }
+        }]);
+    </script>
+</body>
+</html>
+

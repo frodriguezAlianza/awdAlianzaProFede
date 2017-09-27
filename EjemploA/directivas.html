@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App-Directivas</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+    <div ng-controller="myController">
+        <div primer-directiva></div>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController',['$scope',function($scope){
+            $scope.cliente = {nombre:"Jose", direccion:"Dr. Loco123"};
+        }]);
+
+
+        app.directive('primerDirectiva', function() {
+          return {
+            template: 'Name: {{cliente.nombre}} Address: {{cliente.direccion}}'
+          };
+        });
+
+
+    </script>
+    </div>
+</body>
+</html>

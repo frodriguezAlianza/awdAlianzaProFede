@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="persona={nombre:'Jualio',apellido:'Santos'};autos=[{marca:'Fiat',color: 'Verde'},{marca: 'bmw',color:'Amarillo'},{marca: 'Ferrari',color: 'Rojo'}]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body>
+    <style>
+        .box{
+            width: 100%;
+            height: 300px;
+        }
+        .dark{
+        background-color:black;
+        color:white;
+        } 
+        .white{
+            background-color:white;
+            color:black; 
+        }
+        .big{
+            font-size: 30px;
+        }
+        .small{
+            font-size: 10px;
+        }  
+    </style>
+
+    <h1>Estructuras de Control</h1>
+    <h2>ng-show/ng-hide</h2>
+ 	<div ng-show="{{persona.nombre == 'Julio'}}">
+        Formulario HTML
+    </div>
+    <div ng-hide="{{persona.nombre == 'Julio'}}">
+        Nombre de usuario logueado.
+    </div>
+    Mostrar: <input type="checkbox" ng-model="checked"/>
+    <div ng-show="checked">
+        Hola!!!
+    </div>
+
+    <h2>ng-class</h2>    
+    <select ng-model="optionselected">
+        <option value="" >(Elije una opcion)</option>
+        <option value="dark" selected="selected">Dark</option>
+        <option value="white" >White</option>
+    </select>
+    <div ng-class="optionselected">
+      <h1>Agregamos y sacamos clases con valores del scope.</h1>
+    </div>
+    <hr>
+    <input ng-model="estilo" placeholder="Escribe: dark, white"><br>
+    <input ng-model="estilo1" placeholder="Escribe: big, small"><br>
+    <p ng-class="[estilo,estilo1]">Using Array Syntax</p>
+    <hr>
+    <h2>ng-if</h2>
+    Mostrar: <input type="checkbox" ng-model="checkedIF"/>
+    <div ng-if="checkedIF">
+        <h3>Muestro cuando la condicion es true</h3>
+        <h4>No agregar al HTML esta estructura hasta que se cumpla la condicion. No como ng-show/hide que simpre los agregan y varia su clase.</h4>
+    </div>
+</body>
+</html>

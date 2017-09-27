@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disparos Angular App</title>   
+    <script src="./angular.min.js"></script> 
+</head>
+<body ng-app = "mainApp">
+    <h1>Services</h1>
+    <div ng-controller = "serviceController">
+        <label>Gastos</label>
+        <select name="gastoOptionSelect" id="gastoOptionSelect" ng-model="gastoModelS.option">
+                <option ng-repeat="option in gastosSOptions" value="{{option.id}}">{{option.name}}</option>
+        </select>
+        <input type="text" ng-model="gastoModelS.titulo" placeholder="Titulo...">
+        <button ng-click="agregarGasto()">Agregar</button>
+        <label ng-show="gastoModelS.show">Valor: {{gastosS | json}}</label>
+    </div>
+    <hr>
+    <h1>Fabricas</h1>
+    <div ng-controller = "factoryController">
+        <label>Nuevos Comentarios</label>
+        <select name="gastoOptionFSelect" id="gastoOptionFSelect" ng-model="gastosModelF.option">
+                <option ng-repeat="option in gastosF" value="{{option.id}}">{{option.name}}</option>
+        </select>
+        <button ng-click="eventoCLik()">Mostrar</button>
+        <label ng-show="gastosModelF.show">Valor: {{gastosModelF | json}}</label>
+        {{new}}
+   </div>
+   <script>
+         var mainApp = angular.module("mainApp", []);
+         mainApp.constant('gastosCTEOptions', [{id: '1', name: 'Viajes'}, {id: '2', name: 'Facturas'},{id: '3', name: 'Comida'}]);
+         mainApp.constant('gastosCTE', [{id: '0', option:'1',show:true,titulo: 'Francia'}, {id: '1', option:'2',show:true,titulo: 'Pagar OSE'}]);
+
+          ////////////FACTORY/////////////////////
+         mainApp.factory('GastoFactory', function(gastosCTEOptions) {
+            var opcionesDeGasto = gastosCTEOptions;
+            var factory = {};
+            factory.darmeOpcionesdeGasto = function() {
+               return opcionesDeGasto
+            }
+            return factory;
+         });
+         
+         mainApp.controller('factoryController', function($scope, GastoFactory) {
+            $scope.gastosF={};
+            $scope.gastosModelF={show:true};
+            $scope.gastosF= GastoFactory.darmeOpcionesdeGasto();
+           
+            $scope.eventoCLik = function(){
+                $scope.new = "hola";
+            }
+         });
+         ////////////SERVICES/////////////////////
+         mainApp.service('GastosService', function(gastosCTEOptions,gastosCTE){
+
+            this.darmeOpcionesDeGastosService = function() {
+               return gastosCTEOptions;
+            }
+            this.agregarGastoService = function(nuevoGasto){
+                gastosCTE.push(nuevoGasto);
+            }
+            this.darmeGastosService = function(){
+                return gastosCTE;
+            }
+         });
+         
+         mainApp.controller('serviceController', ["$scope","GastosService",function($scope, GastosService) {
+            $scope.gastosS={};
+            $scope.gastoModelS={show:true};
+            $scope.gastosSOptions= GastosService.darmeOpcionesDeGastosService();
+            $scope.gastosS= GastosService.darmeGastosService();
+
+            $scope.agregarGasto = function(){
+                $scope.gastoModelS.id = $scope.gastosS.length;
+                var modal = $scope.gastoModelS;
+                GastosService.agregarGastoService(modal);
+            }
+         }]);
+ 
+      </script>
+</body>
+</html>
+
