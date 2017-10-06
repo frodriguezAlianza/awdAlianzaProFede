@@ -1,9 +1,22 @@
 {
-  "gastos": [],
-  "productos": [],
-  "usuario": {
-    "id": 1,
-    "Nombre": "Jaime",
-    "email": "federico.alianza@alianza.edu.com"
-  }
+  "gastos": [
+    {
+      "option": "1",
+      "titulo": "gatos1",
+      "id": 1
+    }
+  ],
+  "productos": [
+    {
+      "titulo": "p1",
+      "id": 1
+    }
+  ],
+  "usuarios": [
+    {
+      "nombre": "fede",
+      "id": 1,
+      "selected": true
+    }
+  ]
 }
