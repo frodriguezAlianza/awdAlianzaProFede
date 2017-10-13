@@ -10,7 +10,15 @@ app.factory('ProductoService',["$http",function($http){
             return $http.delete("http://localhost:3000/productos/"+deletedProducto.id);
         },
         dbPutProducto: function(editedProducto){
-            return $http.put("http://localhost:3000/productos/"+editedProducto.id,editedProducto);
+            //Otra fomrma de comunicarse con el servidor
+            var jsonData = JSON.stringify(
+            {
+                id: editedProducto.id,
+                titulo: editedProducto.tiutlo,
+                option: editedProducto.option 
+            });
+
+            return $http.put({method:'PUT',url:'http://localhost:3000/productos/',params: jsonData});//$http.put("http://localhost:3000/productos/"+editedProducto.id,editedProducto);
         }
     }
 }]);

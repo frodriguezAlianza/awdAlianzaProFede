@@ -1,22 +1,30 @@
 {
   "gastos": [
     {
-      "option": "1",
-      "titulo": "gatos1",
+      "option": "2",
+      "titulo": "sass",
       "id": 1
-    }
-  ],
-  "productos": [
+    },
     {
-      "titulo": "p1",
-      "id": 1
+      "option": "2",
+      "titulo": "aaaaa",
+      "id": 2
     }
   ],
   "usuarios": [
     {
+      "nombre": "a",
+      "apellido": "a",
+      "username": "a",
+      "password": "a",
+      "id": 1
+    },
+    {
       "nombre": "fede",
-      "id": 1,
-      "selected": true
+      "apellido": "fede",
+      "username": "fede",
+      "password": "fede",
+      "id": 2
     }
   ]
 }

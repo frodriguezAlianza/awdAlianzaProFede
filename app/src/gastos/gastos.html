@@ -1,4 +1,4 @@
-<div class="backgroundLightPurple" ng-controller="gastosController">
+<div class="backgroundLightPurple">
     <hr>
     <h1>Services</h1>
     <label>Gastos</label>
@@ -17,6 +17,7 @@
             </span>
             <button ng-click="oneSelected(gasto)">Editar</button>
             <button ng-click="borrarGasto($index,gasto)">Borrar</button>
+            <a href="#!gastos/{{gasto.id}}">Ver Detalle</a>
         </li>
     </ul>
 </div>

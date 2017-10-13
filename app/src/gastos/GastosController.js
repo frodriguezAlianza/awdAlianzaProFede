@@ -31,5 +31,5 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
             modalSelected.selected = false;
         });
     }
-
+    
 }]);

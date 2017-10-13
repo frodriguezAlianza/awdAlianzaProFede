@@ -21,4 +21,7 @@ app.service('GastosService',["$http","gastosCTEOptions","gastosCTE",function($ht
     this.dbPutGasto = function(editedGasto){
         return $http.put("http://localhost:3000/gastos/"+editedGasto.id,editedGasto);
     }
+    this.dbGetGastoDetail = function(gastoId){
+        return $http({method: 'GET', url: 'http://localhost:3000/gastos/'+gastoId});
+    }
 }]);

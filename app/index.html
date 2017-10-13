@@ -6,23 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular App</title>  
-    <link rel="stylesheet" type="text/css" href="./src/styles/custom.css"> 
+    <link rel="stylesheet" type="text/css" href="./src/styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css.map">
     <!--<script src="./core/angular.min.js"></script>-->
     <script src="./node_modules/angular/angular.js"></script> 
     <script src="./node_modules/angular-route/angular-route.js"></script> 
+    <script src="./node_modules/angular-cookies/angular-cookies.min.js"></script> 
+    <script src="./node_modules/jquery/dist/jquery.js"></script> 
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-
-
-	<script src="./src/app.js"></script> 
-	<script src="./src/filters.js"></script> 
-	<script src="./src/controllers/TodoController.js"></script>
-    <script src="./src/controllers/GastosController.js"></script> 
-    <script src="./src/controllers/ProductosController.js"></script> 
-    <script src="./src/controllers/EnrutamientoController.js"></script> 
-    <script src="./src/controllers/UsuariosController.js"></script> 
-    <script src="./src/services/GastosService.js"></script> 
-    <script src="./src/services/ProductosFactory.js"></script>
-    <script src="./src/services/UsuariosFactory.js"></script>
 </head>
 <body>
 	
@@ -35,13 +28,30 @@
         <pre>$route.current.params = {{$route.current.params}}</pre>
         <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
         <pre>$routeParams = {{$routeParams}}</pre>
-        <div ng-include src="urlNav"></div>
+        <!--<div ng-include src="urlNav"></div>-->
     </div>
     <hr />
-   
+    <div ng-include src="'src/views/base/nav.html'"></div>
     <!-- VISTAS PARCIALES-->
     <div ng-view></div>
     
+
+
+
+    <script src="./src/app.js"></script> 
+	<script src="./src/filters.js"></script> 
+	<script src="./src/controllers/TodoController.js"></script>
+    <script src="./src/gastos/GastosController.js"></script> 
+    <script src="./src/gastos/GastoDetailController.js"></script>
+    <script src="./src/productos/ProductosController.js"></script> 
+    <script src="./src/controllers/EnrutamientoController.js"></script> 
+    <script src="./src/users/UsuariosController.js"></script> 
+    <script src="./src/gastos/GastosService.js"></script> 
+    <script src="./src/productos/ProductosFactory.js"></script>
+    <script src="./src/users/UsuariosFactory.js"></script>
+    <script src="./src/home/AuthenticationService.js"></script>
+    <script src="./src/registro/RegistroController.js"></script>
+    <script src="./src/home/HomeController.js"></script>
 </body>
 </html>
 

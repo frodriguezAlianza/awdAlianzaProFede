@@ -29,5 +29,5 @@ app.controller("usuariosController",["$scope","UsuarioService",function($scope,U
             modalSelected.selected = false;
         });
     }
-
+    
 }]);
