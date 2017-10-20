@@ -3,6 +3,7 @@ app.controller("productosController",["$scope","ProductoService",function($scope
     $scope.productoS={};
     $scope.productoModelS={};
     $scope.selected = {};
+    $scope.tituloDirectiva= "En Producto";
     //Obtengo de la BD
     ProductoService.dbGetProductos().then(function(response){
         $scope.productoS = response.data;

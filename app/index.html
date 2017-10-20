@@ -9,19 +9,27 @@
     <link rel="stylesheet" type="text/css" href="./src/styles/custom.css">
     <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css.map">
+    <link rel="stylesheet" type="text/css" href="./node_modules/angular-carousel/dist/angular-carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./src/productos/productosStyles.css">
     <!--<script src="./core/angular.min.js"></script>-->
     <script src="./node_modules/angular/angular.js"></script> 
     <script src="./node_modules/angular-route/angular-route.js"></script> 
     <script src="./node_modules/angular-cookies/angular-cookies.min.js"></script> 
     <script src="./node_modules/jquery/dist/jquery.js"></script> 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
+    <script src="./node_modules/angular-touch/angular-touch.min.js"></script>
+    <script src="./node_modules/angular-carousel/dist/angular-carousel.min.js"></script>
+    <script src="./node_modules/angular-md5/angular-md5.min.js"></script>
 </head>
 <body>
 	
-    
+    <div ng-include src="'src/views/base/nav.html'"></div>
+    <!-- VISTAS PARCIALES-->
+    <div ng-view></div>
+
+    <div class="col-md-12">
     <hr>
-    <h1>Entrutamineto</h1>
+    <h1>Enrutamineto</h1>
     <div ng-controller="EnrutamientoController">   
         <pre>$location.path() = {{$location.path()}}</pre>
         <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
@@ -30,16 +38,13 @@
         <pre>$routeParams = {{$routeParams}}</pre>
         <!--<div ng-include src="urlNav"></div>-->
     </div>
-    <hr />
-    <div ng-include src="'src/views/base/nav.html'"></div>
-    <!-- VISTAS PARCIALES-->
-    <div ng-view></div>
-    
-
-
+    <hr>
 
     <script src="./src/app.js"></script> 
-	<script src="./src/filters.js"></script> 
+    <script src="./src/filters.js"></script>
+    <script src="./src/directivas/test.js"></script> 
+    <script src="./src/directivas/backButton.js"></script>
+    <script src="./src/directivas/userSesion.js"></script> 
 	<script src="./src/controllers/TodoController.js"></script>
     <script src="./src/gastos/GastosController.js"></script> 
     <script src="./src/gastos/GastoDetailController.js"></script>

@@ -3,6 +3,7 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
     $scope.gastosS={};
     $scope.gastoModelS={};
     $scope.gastosSOptions= GastosService.darmeOpcionesDeGastosService();
+    $scope.tituloDirectiva= "En Gasto";
     //$scope.gastosS= GastosService.darmeGastosService();
     $scope.selected = {};
     //Obtengo de la BD
@@ -31,5 +32,8 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
             modalSelected.selected = false;
         });
     }
+
+   // $scope.desdeDirectiva="Default";
+    $scope.mapeoValorPadre="Resultado de controlador padre";
     
 }]);
