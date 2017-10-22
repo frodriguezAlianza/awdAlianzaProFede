@@ -4,7 +4,8 @@ app.directive('test', function() {
       scope:{
           data: '@',//text binding // = Two way binding no necesita {{}} en el html donde se hace el mapeo // & one binding
           desdedirectiva: '=desdedirectiva1',
-          mapeovalordirectiva: '='
+          mapeovalordirectiva: '=',
+          clickhi: '&'//Desde un boton de adentro de la directiva estamos llamando a un metodo del controlador padre y acutulizando su valor pasado por parametro.
         },
      templateUrl: './src/directivas/templates/test.html',
      //replace:true,//si seleccionamos esta opcion tenemos que hacer que todo el html este adentro de un solo elemento.por ejemplo <div></div>
@@ -18,6 +19,10 @@ app.directive('test', function() {
      
         $scope.mapeovalordirectiva = 'hola';//Este valor se define aca y es visible en el HTML de la directiva como en el HTMl de padre.
         $scope.enDirectiveController = 'En la directiva metodo controller.';
+        //Funciones
+        $scope.clickController = function(){
+          console.log("Controller Click IT");
+        }
       },
       link: function(scope){
         scope.enDirectiveLink = 'En la directiva metodo link.';
@@ -27,6 +32,10 @@ app.directive('test', function() {
         console.log("lAcaaaData:",scope.data);
         console.log("lAcaaa:",scope.desdedirectiva);
 
+        //Funciones
+        scope.clickLink = function(){
+          console.log("Link Click IT");
+        }
       }
     };
 });

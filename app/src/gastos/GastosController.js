@@ -36,5 +36,11 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
    // $scope.desdeDirectiva="Default";
     $scope.mapeoValorPadre="Resultado de controlador padre";
     console.log("AcaaaC:",$scope.mapeoValorPadre);
+
+    $scope.clickHiPadre = function(msgdireciva){
+        console.log('Funcion click en el controlador padre.');
+        $scope.mensaje = msgdireciva;
+    }
+
     
 }]);
