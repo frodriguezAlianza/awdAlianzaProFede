@@ -23,6 +23,7 @@ app.directive('test', function() {
         $scope.clickController = function(){
           console.log("Controller Click IT");
         }
+        $scope.mensajeDirectiva = {mensaje: 'Actulizo el valor desde la directiva'};
       },
       link: function(scope){
         scope.enDirectiveLink = 'En la directiva metodo link.';
@@ -36,6 +37,7 @@ app.directive('test', function() {
         scope.clickLink = function(){
           console.log("Link Click IT");
         }
+        
       }
     };
 });
