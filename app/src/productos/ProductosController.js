@@ -6,6 +6,10 @@ app.controller("productosController",["$scope","ProductoService",function($scope
     $scope.tituloDirectiva= "En Producto";
     //Obtengo de la BD
     ProductoService.dbGetProductos().then(function(response){
+ 
+        angular.forEach(response.data, function(value, key) {
+            value.selected = false;
+        });
         $scope.productoS = response.data;
     });
 
@@ -29,6 +33,7 @@ app.controller("productosController",["$scope","ProductoService",function($scope
         ProductoService.dbPutProducto(modalSelected).then(function(response){
             modalSelected.selected = false;
         });
+        
     }
 
 }]);

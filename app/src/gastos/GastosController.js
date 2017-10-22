@@ -35,5 +35,6 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
 
    // $scope.desdeDirectiva="Default";
     $scope.mapeoValorPadre="Resultado de controlador padre";
+    console.log("AcaaaC:",$scope.mapeoValorPadre);
     
 }]);

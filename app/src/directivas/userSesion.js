@@ -1,6 +1,6 @@
 app.directive('userSesion', [function() {
     return {
-      restrict: 'E',
+      restrict: 'EAC',
       templateUrl: './src/directivas/templates/userSesion.html',
      //replace:true,//si seleccionamos esta opcion tenemos que hacer que todo el html este adentro de un solo elemento.por ejemplo <div></div>
       link: function (scope,element)
@@ -11,6 +11,9 @@ app.directive('userSesion', [function() {
         scope.$on("$locationChangeStart", function (event, next, current) {
           scope.userSesionName =  scope.$root.globals ? scope.$root.globals.currentUser.username: false;
         });
+      },
+      controller: function($scope){
+
       }
     };
 }]);

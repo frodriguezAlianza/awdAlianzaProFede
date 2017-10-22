@@ -2,8 +2,9 @@
   "gastos": [
     {
       "option": "2",
-      "titulo": "sass",
-      "id": 1
+      "titulo": "sassss",
+      "id": 1,
+      "selected": true
     },
     {
       "option": "2",
@@ -13,20 +14,24 @@
   ],
   "productos": [
     {
-      "titulo": "p1",
-      "id": 1
+      "titulo": "4",
+      "id": 1,
+      "selected": true
     },
     {
-      "titulo": "p2",
-      "id": 2
+      "titulo": "42",
+      "id": 2,
+      "selected": true
     },
     {
-      "titulo": "p3",
-      "id": 3
+      "titulo": "423",
+      "id": 3,
+      "selected": true
     },
     {
-      "titulo": "fede",
-      "id": 4
+      "titulo": "Este es mi titulo mas largo",
+      "id": 4,
+      "selected": true
     }
   ],
   "usuarios": [
