@@ -8,6 +8,9 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
     $scope.selected = {};
     //Obtengo de la BD
     GastosService.dbGetGastos().then(function(response){
+        angular.forEach(response.data, function(value, key) {
+            value.selected = false;
+        });
         $scope.gastosS = response.data;
     });
 

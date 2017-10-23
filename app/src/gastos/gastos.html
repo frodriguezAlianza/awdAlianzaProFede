@@ -2,13 +2,16 @@
     <hr>
     <h1>Services</h1>
     <label>Gastos</label>
+
+    <buscador busqueda="textobusqueda"></buscador>
+    <label>Ingrese Datos</label>
     <select name="gastoOptionSelect" id="gastoOptionSelect" ng-model="gastoModelS.option">
         <option ng-repeat="option in gastosSOptions" value="{{option.id}}">{{option.name | myFormat}}</option>
     </select>
     <input type="text" ng-model="gastoModelS.titulo" placeholder="Titulo...">
     <button ng-click="agregarGasto()">Agregar</button>
     <ul>
-        <li ng-repeat="gasto in gastosS">
+        <li ng-repeat="gasto in gastosS | toArray:false | filter:{titulo:textobusqueda}">
             <span ng-hide="gasto.selected">
                 <label>{{gasto.titulo}}</label>
             </span>
