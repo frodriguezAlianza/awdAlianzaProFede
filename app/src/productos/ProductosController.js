@@ -35,5 +35,4 @@ app.controller("productosController",["$scope","ProductoService",function($scope
         });
         
     }
-
 }]);

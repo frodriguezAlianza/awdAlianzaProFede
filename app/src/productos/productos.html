@@ -2,10 +2,13 @@
     <hr>
     <h1>Factory</h1>
     <label>Productos</label>
+
+    <buscador busqueda="textobusqueda"></buscador>
+
     <input type="text" ng-model="productoModelS.titulo" placeholder="Titulo...">
     <button ng-click="agregarProducto()">Agregar</button>
     <ul>
-        <li ng-repeat="producto in productoS">
+        <li ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}">
             <span class="anime" ng-if="!producto.selected">
                 <label>{{producto.titulo}}</label>
             </span>
