@@ -38,4 +38,13 @@
 <div>
 <span my-draggable></span>
 </div>
+</hr>
+<div>   
+        <div><pre> Coordenadas: X: {{coordinates.x}} | Y: {{coordinates.y}}</div>
+        <div><pre> Izquierda swipes: {{model.left}}</div>
+        <div><pre>Derecha swipes: {{model.right}}</pre></div>
+        <div><pre>Touch clicks: {{model.click}}</pre></div>
+    </div>
+    <div class="swipe" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()" ng-click="touchClick()">Swipe me !</div>
+</hr>
 <back-button/>

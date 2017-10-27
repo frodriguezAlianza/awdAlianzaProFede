@@ -44,6 +44,6 @@ app.controller("gastosController",["$scope","GastosService",function($scope,Gast
         console.log('Funcion click en el controlador padre.');
         $scope.mensaje = msgdireciva;
     }
-
+    $scope.selectAmountData= [{val: '0', name: 'Inicial'},{val: '1', name: '30%'},{val: '5', name: '60%'},{val: '10', name: '100%'}];
     
 }]);

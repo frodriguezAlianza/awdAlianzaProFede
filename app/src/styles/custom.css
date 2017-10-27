@@ -10,3 +10,57 @@ background-color:#9FA8DA;
 .backgroundLightGreen{
     background-color:#9DDBAB;
 }
+
+/*Animacion*/
+.view-animate-container {
+    position:relative;
+    background:white;
+    overflow:hidden;
+  }
+  
+  .view-animate {
+   /* padding:10px;*/
+  }
+  
+  .view-animate.ng-enter, .view-animate.ng-leave {
+    transition:all ease 1.5s;
+  
+    display:block;
+    width:100%;
+  
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    /*padding:10px;*/
+  }
+  
+  .view-animate.ng-enter {
+    left:100%;
+  }
+  .view-animate.ng-enter.ng-enter-active {
+    left:0;
+  }
+  .view-animate.ng-leave.ng-leave-active {
+    left:-100%;  
+  }
+
+
+/*Flex*/
+.container_flex{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+/*NG TOUCH*/
+
+
+div.swipe {
+  text-align: center;
+  padding: 25px;
+  margin: 5px;
+  border: 1px groove gray;
+  background-color: lightcoral;
+}

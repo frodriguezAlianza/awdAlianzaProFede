@@ -23,6 +23,12 @@
             <a href="#!gastos/{{gasto.id}}">Ver Detalle</a>
         </li>
     </ul>
+    <hr>
+    <select name="selectAmount" id="selectAmount" ng-model="selectAmount">
+            <option ng-repeat="option in selectAmountData" value="{{option.val}}">{{option.name}}</option>
+    </select>
+    <progress-bar  ng-if="selectAmount" valselected="{{selectAmount}}"></progress-bar>
+    <hr>
     cambiar valor:<input ng-model="mapeoValorPadre">
     <br>
     GastosHTML:{{mapeoValorPadre}}

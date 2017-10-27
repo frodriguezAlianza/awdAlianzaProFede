@@ -25,13 +25,13 @@
 </head>
 <body>
 	
-    <div ng-include src="'src/views/base/nav.html'"></div>
+    <div ng-style="{'padding':'10px 5px'}" ng-include src="'src/views/base/nav.html'"></div>
     <!-- VISTAS PARCIALES-->
-    <div ng-view></div>
+   <div ng-style="{'position':'relative'}"> <div ng-view class="view-animate"></div></div>
 
-    <div class="col-md-12">
+    <div ng-show='false' class="col-md-12">
     <hr>
-    <h1>Enrutamineto</h1>
+    <h1>Enrutamiento</h1>
     <div ng-controller="EnrutamientoController">   
         <pre>$location.path() = {{$location.path()}}</pre>
         <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
@@ -48,7 +48,8 @@
     <script src="./src/directivas/backButton.js"></script>
     <script src="./src/directivas/userSesion.js"></script> 
     <script src="./src/directivas/myDraggable.js"></script> 
-    <script src="./src/directivas/buscador.js"></script> 
+    <script src="./src/directivas/buscador.js"></script>
+    <script src="./src/directivas/progressbar.js"></script> 
 	<script src="./src/controllers/TodoController.js"></script>
     <script src="./src/gastos/GastosController.js"></script> 
     <script src="./src/gastos/GastoDetailController.js"></script>

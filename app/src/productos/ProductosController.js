@@ -35,4 +35,19 @@ app.controller("productosController",["$scope","ProductoService",function($scope
         });
         
     }
+    /*NG TOUCH */
+    $scope.model = {
+        left:  0,
+        right: 0,
+        click: 0
+    };
+    $scope.swipeLeft = function () {
+        $scope.model.left += 1;
+    };
+    $scope.swipeRight = function () {
+        $scope.model.right += 1;
+    }
+    $scope.touchClick = function () {
+        $scope.model.click += 1;
+    };
 }]);
