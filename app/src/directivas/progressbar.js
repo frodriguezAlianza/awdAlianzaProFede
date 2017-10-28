@@ -3,10 +3,9 @@ app.directive('progressBar', ['$q',function($q) {
         templateUrl:'./src/directivas/templates/progressbar.html',
         restrict: 'E',
         scope: {
-            valselected: '='
+            valselected: '@'
         },
         controller: function($scope){
-            debugger;
             $scope.progress={'widht':'100px','background-color':'white'};
             $scope.$watch("valselected",function(newValue,oldValue) {
                 //Detecta cambios en la variable valselected y ejecuta este codigo, baja la performance..
@@ -29,7 +28,6 @@ app.directive('progressBar', ['$q',function($q) {
             });           
         },
         link: function(scope,element) {
-            debugger;
             $(element).find('.boxprogress').css({'height':'20px'});
           
         }

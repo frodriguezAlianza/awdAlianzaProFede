@@ -33,6 +33,16 @@
                     <li style="display: inline-block; transform: translate3d(400%, 0px, 0px);">Slide 9</li>
                 </ul>
     </div>
+    Fotos
+    <div class="carousel_container">
+        <ul rn-carousel class="image" rn-carousel-auto-slide="3">
+            <li ng-repeat="slide in Imagenes">
+            <div ng-style="{'background-image': 'url(' + slide.img + ')'}"  class="bgimage">
+            </div>
+            </li>
+        </ul>
+    </div>       
+</div>
     
 </div>
 <div>

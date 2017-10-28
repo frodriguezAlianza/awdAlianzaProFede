@@ -1,8 +1,12 @@
 app.controller("homeController",["$scope","$location", "AuthenticationService","md5","$rootScope",function($scope, $location, AuthenticationService,md5,$rootScope){
     $scope.displayLogout = $rootScope.globals?true:false;
-    $rootScope.$on('$locationChangeStart', function (event, next, current) {
+    /*$rootScope.$on('$locationChangeStart', function (event, next, current) {
+        $scope.displayLogout = $rootScope.globals?true:false;
+    });*/
+    $scope.$watch("globals",function() {
         $scope.displayLogout = $rootScope.globals?true:false;
     });
+    
     $scope.login = function() {
         $scope.dataLoading = true;
         //Encriptamos la contrasena con MD5 para comparar con el el valor de la BD encriptado.

@@ -13,6 +13,9 @@ app.controller("productosController",["$scope","ProductoService",function($scope
         $scope.productoS = response.data;
     });
 
+    //Imagenes de galeria
+    $scope.Imagenes=[{img:'./src/images/i1.jpg'},{img:'./src/images/i2.jpg'},{img:'./src/images/i3.jpg'}]
+
     $scope.agregarProducto = function(){
         var modal = $scope.productoModelS;
         //  modal.id =  se encarga la api
@@ -50,4 +53,5 @@ app.controller("productosController",["$scope","ProductoService",function($scope
     $scope.touchClick = function () {
         $scope.model.click += 1;
     };
+    
 }]);

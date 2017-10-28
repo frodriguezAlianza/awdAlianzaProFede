@@ -25,9 +25,9 @@
 </head>
 <body>
 	
-    <div ng-style="{'padding':'10px 5px'}" ng-include src="'src/views/base/nav.html'"></div>
+    <div ng-style="{'padding':'10px 5px','position':'fixed','z-index': 1,'background-color': 'white','width': '100%', 'top':0}" ng-include src="'src/views/base/nav.html'"></div>
     <!-- VISTAS PARCIALES-->
-   <div ng-style="{'position':'relative'}"> <div ng-view class="view-animate"></div></div>
+   <div ng-style="{'position':'relative','margin-top': '50px'}"> <div ng-view class="view-animate"></div></div>
 
     <div ng-show='false' class="col-md-12">
     <hr>

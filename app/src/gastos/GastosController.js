@@ -1,6 +1,7 @@
 app.controller("gastosController",["$scope","GastosService",function($scope,GastosService){
     /*Gastos*/
     $scope.gastosS={};
+    $scope.selectAmount='0';
     $scope.gastoModelS={};
     $scope.gastosSOptions= GastosService.darmeOpcionesDeGastosService();
     $scope.tituloDirectiva= "En Gasto";

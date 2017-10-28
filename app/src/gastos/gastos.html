@@ -4,10 +4,13 @@
     <label>Gastos</label>
 
     <buscador busqueda="textobusqueda"></buscador>
+
+    
     <label>Ingrese Datos</label>
     <select name="gastoOptionSelect" id="gastoOptionSelect" ng-model="gastoModelS.option">
         <option ng-repeat="option in gastosSOptions" value="{{option.id}}">{{option.name | myFormat}}</option>
     </select>
+
     <input type="text" ng-model="gastoModelS.titulo" placeholder="Titulo...">
     <button ng-click="agregarGasto()">Agregar</button>
     <ul>
@@ -24,10 +27,20 @@
         </li>
     </ul>
     <hr>
+
+    Progres Bar seleccionar progreso: 
     <select name="selectAmount" id="selectAmount" ng-model="selectAmount">
             <option ng-repeat="option in selectAmountData" value="{{option.val}}">{{option.name}}</option>
     </select>
+
+    <input type="text" ng-model="selectAmount" placeholder="Progress...">
+
+
     <progress-bar  ng-if="selectAmount" valselected="{{selectAmount}}"></progress-bar>
+
+
+
+
     <hr>
     cambiar valor:<input ng-model="mapeoValorPadre">
     <br>
@@ -41,5 +54,6 @@
     valor del mensaje: {{mensaje}}
     <br>
     <test  data="{{mapeoValorPadre}}" desdedirectiva1="desdedirectiva1" mapeovalordirectiva='mapeovalordirectiva' clickhi='clickHiPadre(mensaje)'></test>
+
 </div>
 <back-button/>
