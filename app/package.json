@@ -2,13 +2,13 @@
   "name": "app",
   "description": "First Angular App",
   "author": {
-    "email": "federico.rodriguez@alinaza.ed.uy",
+    "email": "federico.rodriguez@alinaza.edu.uy",
     "name": "Federico",
     "url": "http://localhost:8000"
   },
   "contributors": [
     {
-      "email": "federico.rodriguez@alinaza.ed.uy",
+      "email": "federico.rodriguez@alinaza.edu.uy",
       "name": "Federico",
       "url": "http://localhost:8000"
     }
