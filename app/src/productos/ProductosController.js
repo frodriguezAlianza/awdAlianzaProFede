@@ -53,5 +53,8 @@ app.controller("productosController",["$scope","ProductoService",function($scope
     $scope.touchClick = function () {
         $scope.model.click += 1;
     };
+    $scope.$swipe = function($event){
+        console.log($event);
+    }
     
 }]);

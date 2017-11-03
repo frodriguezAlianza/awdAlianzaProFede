@@ -25,7 +25,7 @@ app.directive('buscador', [function() {
 
                 
             });
-           //Juanta objectos en uno solo
+           //Juanta objetos en uno solo
            scope.margeStyleObj = function(objectList) {
             var obj = {};
             objectList.forEach(function(x) {

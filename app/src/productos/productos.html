@@ -7,17 +7,18 @@
 
     <input type="text" ng-model="productoModelS.titulo" placeholder="Titulo...">
     <button ng-click="agregarProducto()">Agregar</button>
-    <ul>
-        <li ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}">
-            <span class="anime" ng-if="!producto.selected">
-                <label>{{producto.titulo}}</label>
-            </span>
-            <span class="anime" ng-if="producto.selected">
-                <input type="text" ng-model="producto.titulo"><button ng-click="editarProducto(producto)">Guardar</button>
-            </span>
-            <button ng-click="oneSelected(producto)">Editar</button>
-            <button ng-click="borrarProducto($index,producto)">Borrar</button>
-            
+    <ul ng-style="{'text-align':'center'}">
+        <li  ng-style="{'background-color':'grey','border':'1px solid white','list-style-type':'none','position':'relative','height':'30px'}" ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}">
+            <swipe-li ng-style="{'background-color':'red','position':'absolute','top':0,'bottom':0,'left':0,'right':0}">
+                <span  class="anime" ng-if="!producto.selected">
+                    <label>{{producto.titulo}}</label>
+                </span>
+                <span class="anime" ng-if="producto.selected">
+                    <input type="text" ng-model="producto.titulo"><button ng-click="editarProducto(producto)">Guardar</button>
+                </span>
+                <button ng-click="oneSelected(producto)">Editar</button>
+                <button ng-click="borrarProducto($index,producto)">Borrar</button>
+            </swipe-li>
         </li>
     </ul>
     <div class="carousel_container">
