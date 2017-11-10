@@ -37,6 +37,9 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
         templateUrl: 'src/users/usuarios.html',
         controller: 'usuariosController',
     })
+    .when('/404', {
+        templateUrl: 'src/views/404.html'
+    })
     .otherwise( { redirectTo: "/" });;
   
     // configure html5 to get links working on jsfiddle
@@ -61,9 +64,11 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             var restrictedPage = $.inArray($location.path(), ['/login', '/registro']) === -1;
             var loggedIn = $rootScope.globals ? $rootScope.globals.currentUser : null;
             var userRole = $rootScope.globals ? $rootScope.globals.currentUser.userRole : null;
-            if (restrictedPage && !loggedIn) {
-                
+            if (restrictedPage && !loggedIn) {           
                 $location.path('/login');
+            }
+            if($location.path() == '/usuarios' && loggedIn && userRole != 'admin'){
+                $location.path('/404');
             }
             if (userRole == 'admin' && loggedIn) {        
                 $location.path('/usuarios');

@@ -14,7 +14,8 @@
     <input type="text" ng-model="gastoModelS.titulo" placeholder="Titulo...">
     <button ng-click="agregarGasto()">Agregar</button>
     <ul>
-        <li ng-repeat="gasto in gastosS | toArray:false | filter:{titulo:textobusqueda}">
+    
+        <li delay-by-one class="slides_escala" ng-repeat="gasto in gastosS | toArray:false | filter:{titulo:textobusqueda}">
             <span ng-hide="gasto.selected">
                 <label>{{gasto.titulo}}</label>
             </span>
