@@ -9,22 +9,26 @@
     {
       "option": "2",
       "titulo": "aaaaa",
-      "id": 2
+      "id": 2,
+      "selected": true
     },
     {
       "option": "1",
       "titulo": "ddd",
-      "id": 3
+      "id": 3,
+      "selected": true
     },
     {
       "option": "1",
       "titulo": "d11",
-      "id": 4
+      "id": 4,
+      "selected": true
     },
     {
       "option": "1",
       "titulo": "s",
-      "id": 5
+      "id": 5,
+      "selected": true
     }
   ],
   "productos": [
@@ -49,12 +53,13 @@
   ],
   "usuarios": [
     {
-      "nombre": "fe",
+      "nombre": "fede",
       "apellido": "fe",
       "username": "fe",
       "password": "2d917f5d1275e96fd75e6352e26b1387",
       "role": "admin",
-      "id": 4
+      "id": 4,
+      "selected": true
     },
     {
       "nombre": "va",
