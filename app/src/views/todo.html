@@ -5,7 +5,7 @@
     <hr>
     <span>Hola la memoria es de</span><span> <b>{{nuevaMemoria.autor}}!</b></span><button ng-click="agregarMemoria()">Agregar</button></span>
     <ul>
-      <li ng-repeat="memoria in memorias">
+      <li class='pulse' ng-repeat="memoria in memorias">
        
         <span ng-hide="memoria.isEditing">
             <label>{{memoria.texto}}</label>  creado por :  <label>{{memoria.autor | myFormat}}</label>

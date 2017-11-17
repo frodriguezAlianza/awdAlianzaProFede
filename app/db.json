@@ -1,18 +1,6 @@
 {
   "gastos": [
     {
-      "option": "2",
-      "titulo": "sassss",
-      "id": 1,
-      "selected": true
-    },
-    {
-      "option": "2",
-      "titulo": "aaaaa",
-      "id": 2,
-      "selected": true
-    },
-    {
       "option": "1",
       "titulo": "ddd",
       "id": 3,
@@ -38,17 +26,16 @@
       "selected": true
     },
     {
-      "titulo": "Este es mi titulo mas largo",
-      "id": 4,
-      "selected": true
-    },
-    {
-      "titulo": "producto 1",
-      "id": 5
-    },
-    {
       "titulo": "producto 1",
       "id": 6
+    },
+    {
+      "titulo": "asdas",
+      "id": 8
+    },
+    {
+      "titulo": "fafafa",
+      "id": 9
     }
   ],
   "usuarios": [
@@ -76,14 +63,6 @@
       "password": "098f6bcd4621d373cade4e832627b4f6",
       "role": "public",
       "id": 6
-    },
-    {
-      "role": "admin",
-      "nombre": "admin",
-      "apellido": "admin",
-      "username": "admin",
-      "password": "21232f297a57a5a743894a0e4a801fc3",
-      "id": 7
     }
   ]
 }

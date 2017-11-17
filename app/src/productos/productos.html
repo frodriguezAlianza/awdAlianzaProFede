@@ -15,7 +15,7 @@
             </div>
             <div class="col-xs-10 col-md-10 col-lg-10">
                 <ul ng-style="{'text-align':'center'}">
-                    <li  ng-style="{'background-color':'grey','border':'1px solid white','list-style-type':'none','position':'relative','height':'30px'}" ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}">
+                    <li class='pulse' ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}"  ng-style="{'background-color':'grey','border':'1px solid white','list-style-type':'none','position':'relative','height':'30px'}" >
                         <swipe-li ng-style="{'background-color':'red','position':'absolute','top':0,'bottom':0,'left':0,'right':0}">
                             <span  class="anime" ng-if="!producto.selected">
                                 <label>{{producto.titulo}}</label>
