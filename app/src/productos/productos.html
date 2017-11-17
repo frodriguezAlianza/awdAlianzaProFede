@@ -11,6 +11,16 @@
         <div class='row'>
             <div class="col-xs-2 col-md-2 col-lg-2" ng-style="{'text-align':'center'}">
                 <input type="text" ng-model="productoModelS.titulo" placeholder="Titulo...">
+               
+                Drop File:
+                <div ngf-drop ngf-select ng-model="files" class="drop-box" 
+                    ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+                    accept="image/*,application/pdf" 
+                    ngf-pattern="'image/*,application/pdf'">Drop pdfs or images here or click to upload</div>
+                <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+                
+                <img ngf-src="!files[0].$error && files[0]">
+
                 <button class='btn btn-warning'ng-click="agregarProducto()">Agregar</button>
             </div>
             <div class="col-xs-10 col-md-10 col-lg-10">
@@ -18,7 +28,7 @@
                     <li class='pulse' ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}"  ng-style="{'background-color':'grey','border':'1px solid white','list-style-type':'none','position':'relative','height':'30px'}" >
                         <swipe-li ng-style="{'background-color':'red','position':'absolute','top':0,'bottom':0,'left':0,'right':0}">
                             <span  class="anime" ng-if="!producto.selected">
-                                <label>{{producto.titulo}}</label>
+                                <span> <img src="{{producto.files}}" alt="No image" /></span><label>{{producto.titulo}}</label>
                             </span>
                             <span class="anime" ng-if="producto.selected">
                                 <input type="text" ng-model="producto.titulo"><button ng-click="editarProducto(producto)">Guardar</button>

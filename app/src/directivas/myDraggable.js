@@ -4,7 +4,6 @@ app.directive('myDraggable', ['$document','$timeout','$animate', function($docum
     template: '{{text}}',
     link: function(scope, element, attr) {
       var label = angular.element('<span>').addClass('label label-info');
-      debugger;
       $animate.on('enter', element,
           function callback(element, phase) {
             console.log('Evento Enter ejecutado');

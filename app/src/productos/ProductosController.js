@@ -1,4 +1,4 @@
-app.controller("productosController",["$scope","ProductoService",function($scope,ProductoService){
+app.controller("productosController",["$scope","ProductoService","Upload","$timeout",function($scope,ProductoService,Upload,$timeout){
     /*Productos*/
     $scope.productoS={};
     $scope.productoModelS={};
@@ -18,7 +18,8 @@ app.controller("productosController",["$scope","ProductoService",function($scope
 
     $scope.agregarProducto = function(){
         var modal = $scope.productoModelS;
-        //  modal.id =  se encarga la api
+        modal.files = $scope.filesBase64?$scope.filesBase64[0]:'';
+        
         ProductoService.dbPostProducto(modal).then(function(response){
             $scope.productoS.push(response.data);
         });
@@ -57,4 +58,50 @@ app.controller("productosController",["$scope","ProductoService",function($scope
         console.log($event);
     }
     
+    //uploade de Productos
+    $scope.$watch('files', function () {
+        debugger;
+        $scope.upload($scope.files);
+    });
+    $scope.$watch('file', function () {
+        if ($scope.file != null) {
+            $scope.files = [$scope.file]; 
+        }
+    });
+    $scope.log = '';
+
+    $scope.upload = function (files) {
+        if (files && files.length) {
+            for (var i = 0; i < files.length; i++) {
+              var file = files[i];
+              if (!file.$error) {
+
+                Upload.upload({
+                    url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+                    data: {
+                      //username: $scope.username,
+                      file: file  
+                    }
+                }).then(function (resp) {
+                    
+                    $timeout(function() {
+                        Upload.base64DataUrl(files).then(function(urls){
+                            debugger;
+                            $scope.filesBase64 = urls;
+                        });
+                    });
+                }, null, function (evt) {
+                    var progressPercentage = parseInt(100.0 *
+                    		evt.loaded / evt.total);
+                    $scope.log = 'progress: ' + progressPercentage + 
+                    	'% ' + evt.config.data.file.name + '\n' + 
+                      $scope.log;
+                });
+              }
+            }
+        }
+    };
+
+
+
 }]);
