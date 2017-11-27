@@ -28,7 +28,7 @@
                     <li class='pulse' ng-repeat="producto in productoS | toArray:false |filter:{titulo:textobusqueda}"  ng-style="{'background-color':'grey','border':'1px solid white','list-style-type':'none','position':'relative','height':'30px'}" >
                         <swipe-li ng-style="{'background-color':'red','position':'absolute','top':0,'bottom':0,'left':0,'right':0}">
                             <span  class="anime" ng-if="!producto.selected">
-                                <span> <img src="{{producto.files}}" alt="No image" /></span><label>{{producto.titulo}}</label>
+                                <span> <img ngif='' src="{{producto.files}}" alt="No image" /></span><label>{{producto.titulo}}</label>
                             </span>
                             <span class="anime" ng-if="producto.selected">
                                 <input type="text" ng-model="producto.titulo"><button ng-click="editarProducto(producto)">Guardar</button>

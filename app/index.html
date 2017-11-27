@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
-   <base href="/">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +24,11 @@
     <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
     <script src="./node_modules/angular-filter/dist/angular-filter.min.js"></script>
     <script src="./node_modules/ng-file-upload/dist/ng-file-upload-all.min.js"></script>
+    <script src="./node_modules/ng-scroll/ng-scroll.js"></script>
+
+
 </head>
-<body>
+<body ng-controller="bodyController"  data-ng-scroll-up="increment()" data-ng-scroll-down="decrement()">
 	
     <div ng-style="{'padding':'10px 5px','position':'fixed','z-index': 1,'background-color': 'white','width': '100%', 'top':0}" ng-include src="'src/views/base/nav.html'"></div>
     <!-- VISTAS PARCIALES-->
@@ -54,8 +57,9 @@
     <script src="./src/directivas/buscador.js"></script>
     <script src="./src/directivas/swipeli.js"></script>
     <script src="./src/directivas/progressbar.js"></script> 
-    <script src="./src/directivas/delaybyone.js"></script> 
-	<script src="./src/controllers/TodoController.js"></script>
+    <script src="./src/directivas/delaybyone.js"></script>
+    <script src="./src/controllers/TodoController.js"></script> 
+	<script src="./src/home/bodyController.js"></script>
     <script src="./src/gastos/GastosController.js"></script> 
     <script src="./src/gastos/GastoDetailController.js"></script>
     <script src="./src/productos/ProductosController.js"></script> 
